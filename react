@@ -1,0 +1,42 @@
+1.let/const/解构数组（就是）分解一个东西的结构
+ eg:
+ 'use strict'
+ function breakfast(){
+ return [a,b,c];
+ }
+ let [dessert,drink,fruit]=breakfast();
+ console.log(dessert,drink,fruit);
+ 
+ 2.解构对象
+ eg:
+ 'use strict'
+ function breakfast(){
+ return {dessert:"cake",drink:"water",fruit:"apple"};
+ }
+ let {dessert:dessert,drink:drink,fruit:fruit}=breakfast();
+ console.log(dessert,drink,fruit);
+ 
+ 3.模板字符串
+ 'use strict'
+ let dessert="cake";
+ let drink="water";
+ let breakfast=`今天的早餐是+${dessert}+与+${drink}`;
+ console.log(breakfast);
+ 4.带标签的模板字符串
+  'use strict'
+ let dessert="cake";
+ let drink="water";
+ let breakfast=kitchen `今天的早餐是+${dessert}+与+${drink}`;
+ function kitchen(string,values)
+ {
+ console.log(string);//今天的早餐是，与，！
+ console.log(values);//dessert跟drink
+let result='';
+for(var i=0;i<values.length;i++){
+result+=string[i];
+result+=values[i];}
+result+=string[string.length-1];
+ }    return result;
+ console.log(result);
+ 
+                                                  
