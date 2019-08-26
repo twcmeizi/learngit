@@ -39,4 +39,16 @@ result+=string[string.length-1];
  }    return result;
  console.log(result);
  
+ 5.判断字符串里是否包含其他字符串
+ eg:
+ 'use strict'
+ let dessert="cate",drink="water";
+ breakfast= `今天的早餐是+${dessert}+与+${drink}`;
+ console.log(
+ breakfast.startsWith("今天"))；//true
+ breakfast.endsWith("!");//true
+ breakfast.include("dessert");//true
+ 
+ 
+ 
                                                   
