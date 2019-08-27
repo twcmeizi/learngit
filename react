@@ -39,6 +39,10 @@ result+=string[string.length-1];
  }    return result;
  console.log(result);
  
+ 
+ 
+ 
+ 
  5.判断字符串里是否包含其他字符串
  eg:
  'use strict'
@@ -52,3 +56,32 @@ result+=string[string.length-1];
  
  
                                                   
+6.默认参数
+eg:
+'use strict'
+function breakfast(dessert='cake',drink='water')
+{return `${dessert}与${drink}`}
+breakfast(water,fruit);//water,fruit
+breakfast();//cake,water
+
+7.剩余操作符rest
+1)let fruit=['apple','banana'],
+   food=['orange',...fruit];
+   console.log(food);//["orange", "apple", "banana"]
+console.log(fruit)//["apple","banana"];
+
+2)
+console.log(...fruit)//apple banana
+function breakfast(dessert,drink,...food)
+{
+console.log( dessert,drink,food);}
+breakfast(cake,drink,apple,orange)//cake,drink,["apple","orange"];
+breakfast(cake,drink,apple,orange);
+console.log(dessert,drink,...food)//cake,drink,apple,orange
+
+
+
+8.解构参数
+function breakfast(dessert,drink,{location,restautant}={})
+console.log(dessert,drink,location,restautant);
+breakfast('cate','water',{location:"gd",restautant:"机关报"})
