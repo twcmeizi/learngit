@@ -1,2 +1,4 @@
 this is my second times to write git
+这是第二次修改内容
+：wq
 
