@@ -1,0 +1,1 @@
+this is  delete.txt,I want to use it to test remove action
